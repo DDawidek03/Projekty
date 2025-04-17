@@ -2,49 +2,55 @@
 
 Witaj w repozytorium **Projekty Programistyczne**! 🚀
 
-Zbiór projektów, które realizowałem w ramach nauki, szkoleń oraz własnych eksperymentów. Znajdziesz tu aplikacje analityczne, projekty związane z bazami danych, jak i aplikacje desktopowe stworzone w Pythonie.
+Znajdziesz tutaj zestaw projektów z różnych dziedzin programowania – od analizy danych, przez aplikacje desktopowe, aż po budowę stron internetowych. Każdy z nich został stworzony z myślą o rozwoju umiejętności oraz jako demonstracja praktycznych zastosowań zdobytej wiedzy.
+
+🖥️ Pełną prezentację znajdziesz także na mojej stronie:\
+👉 [dawidekdata.com/projects](https://dawidekdata.com/projects.html)
 
 ## 📜 Spis Treści
 
-- [📊 Analiza Danych: COVID-19](./projekty/analiza-covid/README.md)
-- [🗄️ Projekt Bazy Danych: Wypożyczalnia](./projekty/baza-wypozyczalnia/README.md)
-- [📱 Aplikacja Mobilna (Kivy)](./projekty/aplikacja-kivy/README.md)
+- [📉 Tableau – Customer Purchase Behavior](https://public.tableau.com/app/profile/damian.dawidek/viz/CustomerPurchaseBehaviorAnalysis/Overview)
+- [🌍 Tableau + Python/SQL – European Sales Performance](https://public.tableau.com/app/profile/damian.dawidek/viz/EuropeanSalesPerformanceAnalysis2011-2014/Dashboard1)
+- [🗄️ Projekt bazy danych – Sprzedażowo-Bankowa Globalna Korporacja](./projekty/baza-globalna/README.md)
+- [📱 Aplikacja GUI – Python + Kivy](./projekty/aplikacja-kivy/README.md)
+- [🌐 Moja strona – dawidekdata.com](./projekty/portfolio-website/README.md)
 
-## 🌟 O Projektach
+## 🔍 Krótki opis projektów
 
-### 📊 Analiza Danych: COVID-19
+### 📉 Tableau – Customer Purchase Behavior
 
-Projekt analityczny z wykorzystaniem Pythona i bibliotek takich jak Pandas, Matplotlib i Seaborn.  
-Cele projektu:
+Dashboard analityczny przedstawiający wzorce zakupowe klientów. Wykorzystano dane transakcyjne i narzędzia Tableau do wizualizacji.
 
-- Analiza statystyk zachorowań
-- Wizualizacja danych na wykresach
-- Wnioski i rekomendacje
+👉 [Zobacz na Tableau Public](https://public.tableau.com/app/profile/damian.dawidek/viz/CustomerPurchaseBehaviorAnalysis/Overview)
 
-### 🗄️ Projekt Bazy Danych: Wypożyczalnia
+### 🌍 Tableau + Python/SQL – European Sales Performance
 
-Model relacyjnej bazy danych stworzony w MySQL / PostgreSQL.  
-Zawiera:
+Projekt łączący analizę danych sprzedażowych z użyciem SQL i Pythona oraz prezentację wyników w Tableau. Zawiera segmentację regionalną, analizę KPI i trendy czasowe.
+
+👉 [Zobacz na Tableau Public](https://public.tableau.com/app/profile/damian.dawidek/viz/EuropeanSalesPerformanceAnalysis2011-2014/Dashboard1)
+
+### 🗄️ Baza danych – Sprzedażowo-Bankowa Globalna Korporacja
+
+Projekt bazy danych oparty na symulacji działalności międzynarodowej korporacji. Modeluje procesy finansowe, sprzedażowe i zarządzanie klientami. Zawiera:
 
 - Diagram ERD
-- Zapytania SQL (SELECT, JOIN, GROUP BY)
-- Procedury składowane i optymalizację
+- Zapytania SQL i widoki
+- Kolekcje NoSQL w MongoDB
+- Operacje CRUD z wykorzystaniem Pythona
+- Przykładowe scenariusze użytkowania
 
-### 📱 Aplikacja Mobilna (Kivy)
+### 📱 Aplikacja GUI – Python + Kivy
 
-Prosta aplikacja GUI w Pythonie wykorzystująca framework Kivy.  
-Funkcje:
+Aplikacja desktopowa z prostym interfejsem graficznym stworzona w Pythonie i Kivy. Obsługa formularzy, zapis danych i interaktywne UI.
 
-- Intuicyjny interfejs
-- Obsługa formularzy i zapisywanie danych
-- Możliwość eksportu do aplikacji mobilnej
+### 🌐 Moja strona – [dawidekdata.com](https://dawidekdata.com)
 
-## 🚀 Jak Korzystać?
-
-1. Kliknij na wybrany projekt z listy powyżej.
-2. Przejdź do folderu z jego kodem źródłowym oraz README.md.
-3. Sprawdź wymagania techniczne i uruchom projekt lokalnie.
+Moje portfolio online zbudowane w HTML, CSS i JS. Znajdziesz tu projekty, bloga, kontakt i więcej.
 
 ---
 
-> Autor: Damian Dawidek
+> Autor: Damian Dawidek\
+> 🌐 Strona: [dawidekdata.com](https://dawidekdata.com)\
+> ✉️ Email: [tu wpisz email jeśli chcesz]\
+> 📍 Technologie: Python, SQL, MongoDB, Tableau, Kivy, HTML/CSS/JS, Data Viz
+
