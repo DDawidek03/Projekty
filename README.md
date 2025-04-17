@@ -36,16 +36,14 @@ Projekt bazy danych oparty na symulacji działalności międzynarodowej korporac
 - Diagram ERD
 - Zapytania SQL i widoki
 - Kolekcje NoSQL w MongoDB
-- Operacje CRUD z wykorzystaniem Pythona
-- Przykładowe scenariusze użytkowania
-
+  
 ### 📱 Aplikacja GUI – Python + Kivy
 
 Aplikacja desktopowa z prostym interfejsem graficznym stworzona w Pythonie i Kivy. Obsługa formularzy, zapis danych i interaktywne UI.
 
 ### 🌐 Moja strona – [dawidekdata.com](https://dawidekdata.com)
 
-Moje portfolio online zbudowane w HTML, CSS i JS. Znajdziesz tu projekty, bloga, kontakt i więcej.
+Moje portfolio online zbudowane w HTML, CSS, JS i PHP. Znajdziesz tu projekty, bloga, kontakt i więcej.
 
 ---
 
