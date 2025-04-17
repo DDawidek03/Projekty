@@ -49,8 +49,5 @@ Moje portfolio online zbudowane w HTML, CSS i JS. Znajdziesz tu projekty, bloga,
 
 ---
 
-> Autor: Damian Dawidek\
-> 🌐 Strona: [dawidekdata.com](https://dawidekdata.com)\
-> ✉️ Email: [tu wpisz email jeśli chcesz]\
-> 📍 Technologie: Python, SQL, MongoDB, Tableau, Kivy, HTML/CSS/JS, Data Viz
+> Autor: Damian Dawidek
 
