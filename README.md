@@ -114,22 +114,6 @@ Osobiste portfolio prezentujące doświadczenia i projekty, stworzone przy użyc
 
 ---
 
-<div align="center">
-  <a href="mailto:kontakt@dawidekdata.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" height="30">
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/damian-dawidek/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" height="30">
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://dawidekdata.com">
-    <img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" height="30">
-  </a>
-</div>
-
-<br>
-
 <p align="center">
   © 2023 Damian Dawidek | Wszystkie prawa zastrzeżone
 </p>
