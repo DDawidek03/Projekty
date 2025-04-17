@@ -45,7 +45,7 @@ Baza danych składa się z następujących tabel, które wspólnie tworzą kompl
 
 ## 📊 Diagram ERD
 
-![Diagram ERD bazy danych SalesDB](SalesDB_ERD.png)
+![Diagram ERD bazy danych SalesDB](./zdjecia/SalesDB_ERD.png)
 
 ## 🔄 Proces przetwarzania danych
 
@@ -59,7 +59,18 @@ Baza SalesDB jest elementem większego ekosystemu analitycznego:
 
 ## 💻 Kod SQL
 
-Kompletny kod SQL tworzący strukturę bazy danych oraz wszystkie zapytania znajduje się w pliku [**SalesDB.sql**](./SalesDB.sql).
+Kompletny kod SQL tworzący strukturę bazy danych oraz wszystkie zapytania znajduje się w pliku [**SalesDB.sql**](./projekty-pliki/SalesDB.sql).
+
+## 🍃 Kolekcje MongoDB
+
+Dla elastycznego przechowywania danych niestrukturalnych, projekt wykorzystuje również kolekcje MongoDB:
+
+- **PurchaseHistories** - historia zakupów klientów z zagnieżdżonymi informacjami o zamówieniach
+- **BankTransactionLogs** - logi transakcji bankowych z dodatkowymi metadanymi
+- **CustomerBehavior** - analiza zachowań klientów, aktywności i zainteresowań
+- **SellerProfiles** - rozszerzone profile sprzedawców z podsumowaniami sprzedażowymi
+
+Definicje schematów i walidacja danych znajdują się w pliku [**SalesCollections.js**](./projekty-pliki/SalesCollections.js).
 
 ## 🚀 Rozszerzenia i integracje
 
