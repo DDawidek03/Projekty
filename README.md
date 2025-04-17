@@ -21,11 +21,15 @@ Znajdziesz tutaj zestaw projektów z różnych dziedzin programowania – od ana
 
 Dashboard analityczny przedstawiający wzorce zakupowe klientów. Wykorzystano dane transakcyjne i narzędzia Tableau do wizualizacji.
 
+👉 [Zobacz Projekt na stronie + Opis](https://dawidekdata.com/project1.html)
+
 👉 [Zobacz na Tableau Public](https://public.tableau.com/app/profile/damian.dawidek/viz/CustomerPurchaseBehaviorAnalysis/Overview)
 
 ### 🌍 Tableau + Python/SQL – European Sales Performance
 
 Projekt łączący analizę danych sprzedażowych z użyciem SQL i Pythona oraz prezentację wyników w Tableau. Zawiera segmentację regionalną, analizę KPI i trendy czasowe.
+
+👉 [Zobacz Projekt na stronie + Opis](https://dawidekdata.com/project2.html)
 
 👉 [Zobacz na Tableau Public](https://public.tableau.com/app/profile/damian.dawidek/viz/EuropeanSalesPerformanceAnalysis2011-2014/Dashboard1)
 
