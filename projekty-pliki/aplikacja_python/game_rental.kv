@@ -1,0 +1,658 @@
+ScreenManager:
+    LoginScreen:
+    DashboardScreen:
+    RegisterScreen:
+    AccountScreen:
+    RentScreen:
+    EditProfileScreen:
+    SettingsScreen:
+    HelpScreen:
+
+<EditProfileScreen>:
+    name: "edit_profile"
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(20)
+        padding: dp(20)
+        md_bg_color: 1, 1, 1, 1
+        
+        MDTopAppBar:
+            title: "Edit Profile"
+            left_action_items: [['arrow-left', lambda x: setattr(app.root, 'current', 'account')]]
+            elevation: 10
+
+        MDLabel:
+            font_style: "H5"
+            halign: "center"
+            theme_text_color: "Primary"
+        
+        MDTextField:
+            id: name
+            hint_text: "Name"
+            icon_right: "account"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            font_size: "18sp"
+
+        MDTextField:
+            id: last_name
+            hint_text: "Last Name"
+            icon_right: "account"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            font_size: "18sp"
+        
+        MDTextField:
+            id: email
+            hint_text: "Email"
+            icon_right: "email"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            font_size: "18sp"
+        
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            spacing: dp(20)
+            MDTextField:
+                id: password
+                hint_text: "Password"
+                icon_right: "eye-off"
+                password: True
+                size_hint_x: 0.9
+                font_size: "18sp"
+
+        MDRaisedButton:
+            text: "Save Changes"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            on_release: app.save_profile_changes()
+
+<LoginScreen>:
+    name: 'login'
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: dp(25)
+        padding: [dp(40), dp(60), dp(40), dp(40)]
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        size_hint: None, None
+        size: dp(360), dp(580) 
+        md_bg_color: 1, 1, 1, 1
+        radius: [dp(20)]
+        elevation: 6
+
+        Image:
+            source: "logo.png"
+            size_hint: None, None
+            size: dp(105), dp(105)   
+            pos_hint: {"center_x": 0.5}
+            allow_stretch: True
+            keep_ratio: True
+
+        MDLabel:
+            text: "Game Rental"
+            halign: 'center'
+            font_style: 'H4'
+            theme_text_color: "Primary"
+            text_color: [0.1, 0.4, 0.7, 1]
+
+        MDSeparator:
+            height: dp(1)
+            color: [0.85, 0.85, 0.85, 1]
+
+        MDTextField:
+            id: username
+            hint_text: "Username"
+            icon_right: "account"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            font_size: "18sp"
+
+        MDTextField:
+            id: password
+            hint_text: "Password"
+            icon_right: "lock"
+            password: True
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            font_size: "18sp"
+
+        Widget:
+            size_hint_y: None
+            height: dp(5)
+
+        BoxLayout:
+            orientation: 'horizontal'
+            spacing: dp(15)
+            size_hint: None, None
+            width: dp(280)
+            height: dp(50)
+            pos_hint: {"center_x": 0.73}
+
+            MDRaisedButton:
+                text: "Log In"
+                size_hint_x: None
+                width: dp(120)
+                text_color: [1, 1, 1, 1]
+                on_release: app.validate_login()
+
+            MDRaisedButton:
+                text: "Register"
+                size_hint_x: None
+                width: dp(120)
+                text_color: [1, 1, 1, 1]
+                on_release: app.show_register_screen()
+
+<RegisterScreen>:
+    name: "register"
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(25)
+        padding: [dp(40), dp(20), dp(40), dp(40)]
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        size_hint: None, None
+        size: dp(360), dp(680)
+        md_bg_color: 1, 1, 1, 1
+        radius: [dp(15)]
+        elevation: 6
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: dp(48)
+
+            MDIconButton:
+                icon: "arrow-left"
+                pos_hint: {"center_x": -1}
+                on_release: app.show_login_screen()
+
+            Widget:
+            MDLabel:
+                text: "Sign Up"
+                halign: 'center'
+                font_style: 'H6'
+                theme_text_color: "Primary"
+                pos_hint: {"center_y": 0.3}
+            Widget:
+
+        MDSeparator:
+            height: dp(1)
+            color: [0.9, 0.9, 0.9, 1]
+
+        MDTextField:
+            id: name
+            hint_text: "First Name"
+            icon_right: "account"
+            mode: "fill"
+            fill_color: [0.95, 0.95, 0.95, 1]
+            size_hint_x: 1
+            font_size: "16sp"
+            radius: [dp(8)]
+
+        MDTextField:
+            id: last_name
+            hint_text: "Last Name"
+            icon_right: "account"
+            mode: "fill"
+            fill_color: [0.95, 0.95, 0.95, 1]
+            size_hint_x: 1
+            font_size: "16sp"
+            radius: [dp(8)]
+
+        MDTextField:
+            id: email
+            hint_text: "Email"
+            icon_right: "email-outline"
+            mode: "fill"
+            fill_color: [0.95, 0.95, 0.95, 1]
+            size_hint_x: 1
+            font_size: "16sp"
+            radius: [dp(8)]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_x: 1
+            pos_hint: {"center_x": 0.5}
+            spacing: dp(10)
+
+            MDTextField:
+                id: password
+                hint_text: "Password"
+                icon_right: "eye-off"
+                password: True
+                mode: "fill"
+                fill_color: [0.95, 0.95, 0.95, 1]
+                size_hint_x: 1.2
+                font_size: "16sp"
+                radius: [dp(8)]
+
+            MDIconButton:
+                id: toggle_password
+                icon: "eye-off"
+                pos_hint: {'center_y': 0.4}
+                on_release:
+                    app.toggle_password_visibility(self, password)
+
+        MDTextField:
+            id: confirm_password
+            hint_text: "Confirm Password"
+            icon_right: "eye-off"
+            password: True
+            mode: "fill"
+            fill_color: [0.95, 0.95, 0.95, 1]
+            size_hint_x: 1
+            font_size: "16sp"
+            radius: [dp(8)]
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: dp(48)
+            spacing: dp(10)
+
+            MDRaisedButton:
+                text: "Generate Password"
+                size_hint_x: 0.5
+                text_color: [1, 1, 1, 1]
+                on_release:
+                    app.root.get_screen('register').ids.password.text = app.generate_password()
+                    app.root.get_screen('register').ids.confirm_password.text = app.root.get_screen('register').ids.password.text
+
+            MDRaisedButton:
+                text: "Register"
+                size_hint_x: 0.5
+                text_color: [1, 1, 1, 1]
+                on_release: app.register_user()
+
+        Widget:
+            size_hint_y: None
+            height: dp(10)
+
+        MDTextButton:
+            text: "Already have an account? Log in"
+            theme_text_color: "Custom"
+            text_color: [0.26, 0.59, 0.76, 1]
+            font_size: "16sp"
+            pos_hint: {"center_x": 0.5}
+            on_release: app.show_login_screen()
+
+<DashboardScreen>:
+    name: 'dashboard'
+    MDNavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDTopAppBar:
+                        title: "Dashboard"
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("toggle")]]
+                        right_action_items: [['account-circle', lambda x: app.show_account_screen()]]
+                        elevation: 10
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        spacing: dp(20)
+                        padding: dp(20)
+                        md_bg_color: 1, 1, 1, 1
+
+                        MDCard:
+                            orientation: 'vertical'
+                            padding: dp(20)
+                            md_bg_color: 0.9, 0.9, 0.9, 1
+                            radius: [10]
+                            MDLabel:
+                                text: ""
+                                theme_text_color: "Primary"
+                                font_style: "Subtitle1"
+                                halign: "center"
+                            BoxLayout:
+                                id: rental_history
+                                orientation: 'vertical'
+                                spacing: dp(5)
+                                padding: dp(5)
+
+                        BoxLayout:
+                            orientation: 'horizontal'
+                            spacing: dp(20)
+                            size_hint_y: None
+                            height: dp(50)
+
+                            MDRaisedButton:
+                                text: "Rent a Game"
+                                on_release: app.show_rent_screen()
+                                size_hint_x: 0.5
+
+                            MDTextField:
+                                id: return_game_title
+                                hint_text: "Game Title to Return"
+                                size_hint_x: 0.5
+
+                        MDRaisedButton:
+                            text: "Return Game"
+                            on_release: app.return_game()
+                            size_hint_x: 1
+
+        NavigationDrawer:
+            id: nav_drawer
+            md_bg_color: 0.2, 0.2, 0.2, 1
+
+            BoxLayout:
+                orientation: 'vertical'
+                padding: dp(10)
+                spacing: dp(10)
+
+                MDLabel:
+                    text: "Menu"
+                    font_style: 'H5'
+                    halign: 'left'
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+                    pos_hint: {"center_x": 0.1}
+
+                MDSeparator:
+                    height: dp(1)
+                    color: 1, 1, 1, 1
+                    pos_hint: {"center_x": -0.1}
+                    size_hint_x: 2.2
+
+                OneLineIconListItem:
+                    text: "Settings"
+                    pos_hint: {"center_x": 0.1}
+                    size_hint_x: 2.2
+                    on_release: app.show_settings()
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+                    IconLeftWidget:
+                        icon: 'cog'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+                    height: dp(1)
+                    color: 1, 1, 1, 1
+                    pos_hint: {"center_x": -0.1}
+                    size_hint_x: 2.2
+
+                OneLineIconListItem:
+                    text: "Help"
+                    on_release: app.show_help()
+                    pos_hint: {"center_x": 0.1}
+                    size_hint_x: 2.2
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+                    IconLeftWidget:
+                        icon: 'help-circle'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+                MDSeparator:
+                    height: dp(1)
+                    color: 1, 1, 1, 1
+                    pos_hint: {"center_x": -0.1}
+                    size_hint_x: 2.2
+
+                OneLineIconListItem:
+                    text: "Log Out"
+                    pos_hint: {"center_x": 0.1}
+                    size_hint_x: 2.2
+                    on_release: app.log_out()
+                    theme_text_color: "Custom"
+                    text_color: 1, 1, 1, 1
+                    IconLeftWidget:
+                        icon: 'logout'
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+
+<AccountScreen>:
+    name: "account"
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: 1, 1, 1, 1
+
+        MDTopAppBar:
+            title: "Account"
+            left_action_items: [['arrow-left', lambda x: setattr(app.root, 'current', 'dashboard')]]
+            elevation: 10
+
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: dp(20)
+            padding: dp(20)
+            md_bg_color: 1, 1, 1, 1
+
+            MDCard:
+                orientation: "vertical"
+                size_hint: None, None
+                size: dp(350), dp(300)
+                pos_hint: {"center_x": 0.5}
+                radius: dp(20)
+                elevation: 4
+                md_bg_color: app.theme_cls.primary_light
+                padding: dp(20)
+                spacing: dp(20)
+
+                MDFloatLayout:
+                    MDIcon:
+                        icon: "account"
+                        size_hint: None, None
+                        size: dp(200), dp(200)
+                        pos_hint: {"center_x": 0.5, "center_y": 0.8}
+                        theme_text_color: "Custom"
+                        text_color: app.theme_cls.primary_color
+
+                    MDLabel:
+                        id: user_name
+                        font_style: "H6"
+                        halign: "center"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.55}
+                        theme_text_color: "Primary"
+
+                    MDLabel:
+                        id: user_last_name
+                        font_style: "H6"
+                        halign: "center"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.45}
+                        theme_text_color: "Primary"
+
+                    MDLabel:
+                        id: user_email
+                        font_style: "Caption"
+                        halign: "center"
+                        pos_hint: {"center_x": 0.5, "center_y": 0.35}
+                        theme_text_color: "Secondary"
+
+            MDBoxLayout:
+                orientation: "vertical"
+                spacing: dp(15)
+                padding: dp(10)
+                adaptive_height: True
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(60)
+                    radius: dp(15)
+                    elevation: 3
+                    md_bg_color: app.theme_cls.bg_darkest
+                    on_release: app.show_edit_profile()
+
+                    MDBoxLayout:
+                        padding: dp(10), 0
+                        MDIconButton:
+                            icon: "account-edit"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                        MDLabel:
+                            text: "Edit Profile"
+                            font_style: "Body1"
+                            theme_text_color: "Primary"
+                            halign: "left"
+                        MDIconButton:
+                            icon: "chevron-right"
+                            theme_text_color: "Hint"
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(60)
+                    radius: dp(15)
+                    elevation: 3
+                    md_bg_color: app.theme_cls.bg_darkest
+                    on_release: app.show_settings()
+
+                    MDBoxLayout:
+                        padding: dp(10), 0
+                        MDIconButton:
+                            icon: "cog"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                        MDLabel:
+                            text: "Settings"
+                            font_style: "Body1"
+                            theme_text_color: "Primary"
+                            halign: "left"
+                        MDIconButton:
+                            icon: "chevron-right"
+                            theme_text_color: "Hint"
+
+                MDCard:
+                    size_hint_y: None
+                    height: dp(60)
+                    radius: dp(15)
+                    elevation: 3
+                    md_bg_color: app.theme_cls.bg_darkest
+                    on_release: app.log_out()
+
+                    MDBoxLayout:
+                        padding: dp(10), 0
+                        MDIconButton:
+                            icon: "logout"
+                            theme_text_color: "Custom"
+                            text_color: app.theme_cls.primary_color
+                        MDLabel:
+                            text: "Log Out"
+                            font_style: "Body1"
+                            theme_text_color: "Primary"
+                            halign: "left"
+                        MDIconButton:
+                            icon: "chevron-right"
+                            theme_text_color: "Hint"
+
+<RentScreen>:
+    name: "rent"
+    MDBoxLayout:
+        orientation: "vertical"
+        md_bg_color: 1, 1, 1, 1
+
+        MDTopAppBar:
+            title: "Rent a Game"
+            left_action_items: [['arrow-left', lambda x: setattr(app.root, 'current', 'dashboard')]]
+            right_action_items: [['refresh', lambda x: app.load_available_games()]]
+            elevation: 10
+
+        MDBoxLayout:
+            orientation: "vertical"
+            spacing: dp(20)
+            padding: dp(20)
+            md_bg_color: 1, 1, 1, 1
+
+            MDLabel:
+                text: "Available Games"
+                font_style: "H6"
+                theme_text_color: "Primary"
+                halign: "center"
+                size_hint_y: None
+                height: dp(40)
+                
+            ScrollView:
+                do_scroll_x: False
+                
+                MDList:
+                    id: available_games_list
+                    padding: dp(10)
+                    spacing: dp(5)
+            
+            MDTextField:
+                id: game_title
+                hint_text: "Game Title"
+                icon_right: "gamepad-variant"
+                size_hint_x: 1
+                pos_hint: {"center_x": 0.5}
+                size_hint_y: None
+                height: dp(48)
+                helper_text: "Select a game from the list above or type the title"
+                helper_text_mode: "on_focus"
+
+            MDRaisedButton:
+                text: "Rent"
+                size_hint_x: 1
+                pos_hint: {"center_x": 0.5}
+                size_hint_y: None
+                height: dp(50)
+                on_release: app.rent_game()
+
+<SettingsScreen>:
+    name: "settings"
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(20)
+        padding: dp(20)
+        md_bg_color: 1, 1, 1, 1
+
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [['arrow-left', lambda x: setattr(app.root, 'current', 'dashboard')]]
+            elevation: 10
+
+        ScrollView:
+            MDBoxLayout:
+                orientation: "vertical"
+                spacing: dp(20)
+                padding: dp(20)
+                adaptive_height: True
+
+                MDLabel:
+                    text: "General Settings"
+                    font_style: "H6"
+                    theme_text_color: "Primary"
+
+                MDSeparator:
+                    height: dp(1)
+
+                MDLabel:
+                    text: "Toggle Dark Mode"
+                    theme_text_color: "Primary"
+                MDRaisedButton:
+                    text: "Toggle Dark Mode"
+                    size_hint_x: 1
+                    pos_hint: {"center_x": 0.5}
+                    on_release: app.toggle_dark_mode()
+
+                MDLabel:
+                    text: "Account Settings"
+                    font_style: "H6"
+                    theme_text_color: "Primary"
+
+                MDSeparator:
+                    height: dp(1)
+
+                MDLabel:
+                    text: "Change Password"
+                    theme_text_color: "Primary"
+                MDRaisedButton:
+                    text: "Change Password"
+                    size_hint_x: 1
+                    pos_hint: {"center_x": 0.5}
+                    on_release: app.show_edit_profile()
+
+<HelpScreen>:
+    name: "help"
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(20)
+        padding: dp(20)
+        md_bg_color: 0.95, 0.95, 0.95, 1
+
+        MDTopAppBar:
+            title: "Help & Support"
+            left_action_items: [['arrow-left', lambda x: setattr(app.root, 'current', 'dashboard')]]
+            elevation: 10

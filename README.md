@@ -12,7 +12,7 @@ Znajdziesz tutaj zestaw projektów z różnych dziedzin programowania – od ana
 - [📉 Tableau – Customer Purchase Behavior](https://public.tableau.com/app/profile/damian.dawidek/viz/CustomerPurchaseBehaviorAnalysis/Overview)
 - [🌍 Tableau + Python/SQL – European Sales Performance](https://public.tableau.com/app/profile/damian.dawidek/viz/EuropeanSalesPerformanceAnalysis2011-2014/Dashboard1)
 - [🗄️ Projekt bazy danych – Sprzedażowo-Bankowa Globalna Korporacja](./projekt-sql1.md)
-- [📱 Aplikacja GUI – Python + Kivy](./projekty/aplikacja-kivy/README.md)
+- [📱 Aplikacja GUI – Python + Kivy](./projektPython1.md)
 - [🌐 Moja strona – dawidekdata.com](https://dawidekdata.com)
 
 ## 🔍 Krótki opis projektów
@@ -43,11 +43,13 @@ Projekt bazy danych oparty na symulacji działalności międzynarodowej korporac
 
 ### 📱 Aplikacja GUI – Python + Kivy
 
-Aplikacja desktopowa z prostym interfejsem graficznym stworzona w Pythonie i Kivy. Obsługa formularzy, zapis danych i interaktywne UI.
+Aplikacja desktopowa do zarządzania wypożyczalnią gier stworzona w Pythonie z wykorzystaniem frameworka Kivy/KivyMD. Posiada funkcje rejestracji, logowania, wypożyczania i zwracania gier oraz zarządzania kontem użytkownika.
+
+👉 [Zobacz szczegóły projektu](./projektPython1.md)
 
 ### 🌐 Moja strona – [dawidekdata.com](https://dawidekdata.com)
 
-Moje portfolio online zbudowane w HTML, CSS, JS i PHP. Znajdziesz tu projekty, bloga, kontakt i więcej.
+Moje portfolio online zbudowane w HTML, CSS, JS i PHP. Znajdziesz tu projekty, kontakt i więcej.
 
 ---
 
