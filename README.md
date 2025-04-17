@@ -13,7 +13,7 @@ Znajdziesz tutaj zestaw projektów z różnych dziedzin programowania – od ana
 - [🌍 Tableau + Python/SQL – European Sales Performance](https://public.tableau.com/app/profile/damian.dawidek/viz/EuropeanSalesPerformanceAnalysis2011-2014/Dashboard1)
 - [🗄️ Projekt bazy danych – Sprzedażowo-Bankowa Globalna Korporacja](./projekt-sql1.md)
 - [📱 Aplikacja GUI – Python + Kivy](./projekty/aplikacja-kivy/README.md)
-- [🌐 Moja strona – dawidekdata.com](./projekty/portfolio-website/README.md)
+- [🌐 Moja strona – dawidekdata.com](https://dawidekdata.com)
 
 ## 🔍 Krótki opis projektów
 
