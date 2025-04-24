@@ -30,7 +30,7 @@ Celem projektu jest stworzenie systemu bankowego opartego na relacyjnej bazie da
 
 ## 🧱 **Struktura bazy danych (ERD)**
 
-![Diagram ERD bazy danych prism.db](./zdjecia/prism-erd.png)
+![Diagram ERD bazy danych prism.db](../zdjecia/prism-erd.png)
 
 ### 📊 **Tabele w bazie danych**
 
