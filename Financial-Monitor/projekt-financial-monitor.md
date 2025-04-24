@@ -123,9 +123,9 @@ Celem projektu jest stworzenie systemu bankowego opartego na relacyjnej bazie da
 
 ---
 
-## 🔍 **System wykrywania anomalii**
+## 🔍 **System wykrywania anomalii (w trakcie pracy)**
 
-Projekt zawiera system wykrywania anomalii (`anomali_alert.py`), który należy zaimplementować. System powinien:
+Projekt zawiera system wykrywania anomalii ([`anomaly_alert.py`](../Financial-Monitor/skrypty/anomaly_alert.py)), który jest obecnie w trakcie implementacji. System powinien:
 
 1. **Analizować transakcje** pod kątem podejrzanych wzorców
 2. **Wykrywać anomalie** oparte na następujących kryteriach:
@@ -144,16 +144,37 @@ System powinien wykorzystywać:
 
 ---
 
-## 💾 **Backup bazy danych (`backup.py`)**
+## 📊 **ETL - Generator danych**
 
-System kopii zapasowych automatyzujący proces tworzenia i zarządzania backupami bazy danych:
+Projekt wykorzystuje generator danych ([`data_generator.py`](../Financial-Monitor/skrypty/data_generator.py)) do symulacji działania banku i zasilania bazy danych:
 
-- Automatyczne tworzenie kopii zapasowych przy użyciu `mysqldump`
-- Konfigurowalny system przechowywania kopii zapasowych z domyślnymi ustawieniami
+- Generowanie realistycznych danych klientów, kont i transakcji
+- Symulacja historii transakcji z różnymi wzorcami użytkowania
+- Tworzenie danych z odpowiednią dystrybucją i relacjami
+- Obsługa różnych typów kont, walut i transakcji
+- Zasilanie bazy danych w kontrolowany sposób z możliwością ustawienia parametrów
+
+Ten komponent ETL (Extract, Transform, Load) pozwala na:
+
+- Kontrolowane generowanie zestawów testowych
+- Symulację normalnych i anomalnych zachowań klientów
+- Tworzenie różnorodnych scenariuszy transakcyjnych
+- Skalowanie liczby rekordów według potrzeb
+
+---
+
+## 💾 **Backup bazy danych**
+
+System kopii zapasowych ([`backup.py`](../Financial-Monitor/skrypty/backup.py)) automatyzujący proces tworzenia i zarządzania backupami bazy danych:
+
+- Automatyczne tworzenie kopii zapasowych przy użyciu narzędzia `mysqldump`
+- Konfigurowalny system z możliwością ustawień w pliku konfiguracyjnym `db_config.ini`
+- Dynamiczne generowanie nazw plików kopii zapasowych zawierających datę i czas
 - Rotacja starych kopii zapasowych (usuwanie po określonym czasie - domyślnie 7 dni)
-- Szczegółowe logi wykonywanych operacji z informacją o błędach
-- Obsługa wszystkich obiektów bazy danych (procedury, wyzwalacze, widoki)
-- Możliwość uruchamiania ręcznego lub przez harmonogram zadań
+- Szczegółowe logi wykonywanych operacji z informacją o błędach zapisywane w pliku `backup.log`
+- Obsługa wszystkich obiektów bazy danych (procedury, wyzwalacze, widoki, zdarzenia)
+- Możliwość uruchamiania ręcznego lub przez harmonogram zadań (cron, Task Scheduler)
+- Zabezpieczenia przed błędami z obsługą wyjątków i raportowaniem problemów
 
 ---
 
