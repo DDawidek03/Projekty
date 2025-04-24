@@ -107,6 +107,23 @@ Repozytorium zawiera projekty wykorzystujące różne technologie programistyczn
   
   <tr>
     <td valign="top">
+      <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" height="20" style="margin-right: 5px;"/> 
+      <b>Financial Monitor</b>
+    </td>
+    <td valign="top">
+      System monitorowania i analizowania danych finansowych z wykorzystaniem SQL, Pythona i Power BI. Obejmuje wykrywanie anomalii w transakcjach i automatyczne tworzenie kopii zapasowych.
+    </td>
+    <td align="center">
+      <a href="./Financial-Monitor/projekt-financial-monitor.md">
+        <img src="https://img.shields.io/badge/DOKUMENTACJA-4479A1?style=for-the-badge&logo=microsoftsqlserver&logoColor=white&logoWidth=20" height="28"/>
+      </a>
+    </td>
+  </tr>
+  
+  <tr><td colspan="3" height="30"></td></tr>
+  
+  <tr>
+    <td valign="top">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20" height="20"/> 
       <b>dawidekdata.com</b>
     </td>
